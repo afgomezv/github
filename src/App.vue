@@ -1,10 +1,24 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <Navbar />
+  <router-view />
 </template>
+
+<script>
+import { mapActions } from "vuex";
+import Navbar from "./components/Navbar.vue";
+export default {
+  components: {
+    Navbar,
+  },
+  methods: {
+    ...mapActions(["loadLocalStorage"]),
+  },
+  created() {
+    this.loadLocalStorage();
+  },
+};
+</script>
+
 
 <style lang="scss">
 #app {
@@ -13,6 +27,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  overflow-x: hidden;
 }
 
 nav {

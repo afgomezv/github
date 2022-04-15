@@ -1,0 +1,132 @@
+///****inputs styles****\\\\
+
+@mixin label-for-input {
+  color: $color-white;
+  font-family: $font-family-label;
+  display: flex;
+  justify-content: flex-start;
+}
+
+@mixin border-input {
+  display: flex;
+  height: 40px;
+  margin: 10px 0px 10px 0px;
+  padding: 10px 0px 10px 15px;
+  background-color: $color-gray-light;
+  border-radius: 10px;
+  border: 2px solid $color-white;
+  outline: none;
+}
+
+@mixin input-content {
+  width: 95%;
+  background-color: $color-gray-light;
+  color: $color-white;
+  font-family: $font-family-label;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 18px;
+  padding: 4px;
+}
+
+@mixin icon-eye {
+  background-color: inherit;
+  border: none;
+  margin-right: 2%;
+}
+
+///****message below the input****\\\\
+
+@mixin message-content($color-message) {
+  color: $color-message;
+  display: flex;
+  justify-content: flex-end;
+  font-family: $font-family-label;
+  font-size: 12px;
+}
+
+///****button styles****\\\\
+
+@mixin primary-button() {
+  border-radius: 10px;
+  border: none;
+  background-color: $color-secondary;
+  color: $color-tertiary;
+  font-weight: bold;
+  height: 40px;
+  margin: auto;
+  width: 100%;
+  font-weight: bold;
+  font-family: $font-family-button;
+  &:hover {
+    background-color: darken($color-secondary, 3%);
+  }
+}
+
+///****social media styles****\\\\
+
+@mixin icons-social-media() {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-white;
+  button {
+    padding: 8px 12px;
+    border: 1px solid $color-white;
+    background-color: $color-gray-light;
+    border-radius: 10px;
+    cursor: default;
+    margin: 0px 20px;
+  }
+}
+
+@mixin message-social-media() {
+  &__text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+    font-family: $font-family-text;
+    font-weight: bold;
+    padding: 3%;
+    hr {
+      width: 12%;
+      height: 3px;
+      color: $color-white;
+      margin: 0px 15px;
+    }
+  }
+}
+
+///****cirlce styles****\\\\
+
+@mixin circle() {
+  position: relative;
+  background-color: $color-secondary;
+  margin: 5% auto 0 auto;
+  z-index: 5;
+  width: 548px;
+  height: 548px;
+  border-radius: 50%;
+}
+
+///****Title animeyabu.****\\\\
+
+@mixin title-anime() {
+  font-family: $font-family-text;
+  font-weight: 900;
+  font-size: 60px;
+  letter-spacing: 0.065em;
+}
+
+@mixin title-yabu() {
+  font-family: $font-family-text;
+  font-weight: 500;
+  color: $color-white;
+  font-size: 18px;
+  line-height: 21px;
+}
